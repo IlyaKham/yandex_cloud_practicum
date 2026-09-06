@@ -4,6 +4,11 @@ variable "cloud_id" {
   description = "YC Cloud ID"
 }
 
+variable "service_account_id" {
+  type        = string
+  description = "Service account ID for instance group"
+}
+
 variable "folder_id" {
   type        = string
   description = "YC Folder ID"
@@ -56,4 +61,17 @@ variable "test_vms" {
     }
   }
   description = "Configuration for test VMs"
+}
+
+
+variable "student_name" {
+  type        = string
+  description = "Your name for bucket naming"
+  default     = "khamuro"
+}
+
+variable "image_source_path" {
+  type        = string
+  description = "Local path to image file"
+  default     = "/home/khamuro/yandex_cloud_practicum/kotik.jpg" 
 }
